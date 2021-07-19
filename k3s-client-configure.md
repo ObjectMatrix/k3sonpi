@@ -14,7 +14,10 @@ export K3S_TOKEN=K10d242b3f69d254128eac1522cbe0bc03a06a0b6f45f0b6f01d31d85ce8645
 
 
 ### Configure pi's hardware
-sudo sed -i '1s/^/cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory /' /boot/firmware/cmdline.txt  
+Need to add following to file: /boot/firmware/cmdline.txt  
+!caution: do not add a new line  
+sudo sed -i '1s/^/cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory /'   
+
 sudo reboot  
   
 ### handy
