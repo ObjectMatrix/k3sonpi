@@ -1,5 +1,5 @@
 ## Kubernetes on Pi  
-[cluster](./piKube.png)
+![pi-cluster](https://github.com/ObjectMatrix/k3sonpi/blob/main/piKube.png)
 
 ### Prepare Worker Nodes  
 sudo cat /var/lib/rancher/k3s/server/node-token  
