@@ -31,7 +31,10 @@ Kubernetes is used to manage Docker containers on hybrid cloud infrastructure. T
 follow this to install docker and k3s  
 https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
 
-
+### Uninstall K3S  
+ - /usr/local/bin/k3s-uninstall.sh   (server)
+ - /usr/local/bin/k3s-agent-uninstall.sh (workers)
+ - 
 
 Read More:  
   - https://levelup.gitconnected.com/kubernetes-cluster-with-k3s-and-multipass-7532361affa3  
