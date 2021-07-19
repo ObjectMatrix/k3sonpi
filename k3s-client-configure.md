@@ -1,3 +1,5 @@
+## Kubernetes on Pi  
+[cluster](./piKube.png)
 
 ### Prepare Worker Nodes  
 sudo cat /var/lib/rancher/k3s/server/node-token  
