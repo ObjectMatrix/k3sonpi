@@ -24,7 +24,8 @@ sudo reboot
 hostname naming:
 sudo hostnamectl set-hostname "YOUR_PI_HOSTNAME"  
 
-
+### Docker  
+Kubernetes is used to manage Docker containers on hybrid cloud infrastructure. Thus we need to have docker up and running on all the nodes before we can setup K3s.  
 sources:  
 https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/   
 https://medium.com/@yankee.exe/setting-up-multi-node-kubernetes-cluster-with-k3s-and-multipass-d4efed47fed5  
