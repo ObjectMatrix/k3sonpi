@@ -34,6 +34,7 @@ https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/
 
 
 Read More:  
-https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/   
-https://medium.com/@yankee.exe/setting-up-multi-node-kubernetes-cluster-with-k3s-and-multipass-d4efed47fed5  
+  - https://levelup.gitconnected.com/kubernetes-cluster-with-k3s-and-multipass-7532361affa3  
+  - https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/   
+  - https://medium.com/@yankee.exe/setting-up-multi-node-kubernetes-cluster-with-k3s-and-multipass-d4efed47fed5  
 
