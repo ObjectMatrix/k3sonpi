@@ -1,9 +1,3 @@
-### Uninstall from Master node  
-/usr/local/bin/k3s-uninstall.sh
-
-### Uninstall k3 agent (worker nodes)  
-/usr/local/bin/k3s-agent-uninstall.sh
-
 
 ### Prepare Worker Nodes  
 sudo cat /var/lib/rancher/k3s/server/node-token  
