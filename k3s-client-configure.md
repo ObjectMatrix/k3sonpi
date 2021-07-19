@@ -28,7 +28,7 @@ follow this to install docker and k3s
 https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
 
 ### config
-copy following file from Master
+copy this file from Master
 /etc/rancher/k3s/k3s.yaml   
 to each Worker  
 ${HOME}/.kube/k3s.yaml  
