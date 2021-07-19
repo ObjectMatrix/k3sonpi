@@ -26,12 +26,14 @@ sudo hostnamectl set-hostname "YOUR_PI_HOSTNAME"
 
 ### Docker  
 Kubernetes is used to manage Docker containers on hybrid cloud infrastructure. Thus we need to have docker up and running on all the nodes before we can setup K3s.  
-sources:  
+
+### Install K3 Master and Workers  
+follow this to install docker and k3s  
+https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
+
+
+
+Read More:  
 https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/   
 https://medium.com/@yankee.exe/setting-up-multi-node-kubernetes-cluster-with-k3s-and-multipass-d4efed47fed5  
 
-
-
-### Install K3 Server  
-follow this to install docker and k3s  
-https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
