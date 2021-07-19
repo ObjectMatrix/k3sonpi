@@ -32,7 +32,13 @@ copy this file from Master
 /etc/rancher/k3s/k3s.yaml   
 to each Worker  
 ${HOME}/.kube/k3s.yaml  
-
+### Node Selector Command:  
+You can use this command to label all nodes  
+kubectl label nodes <your node name> nodePool=cluster  
+  Example:  
+>  kubectl label nodes worker-01 nodePool=cluster
+  
+  
 ### Uninstall K3S  
  - /usr/local/bin/k3s-uninstall.sh   (server)
  - /usr/local/bin/k3s-agent-uninstall.sh (workers)
