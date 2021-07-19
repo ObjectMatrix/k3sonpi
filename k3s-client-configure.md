@@ -21,7 +21,15 @@ hostname naming:
 sudo hostnamectl set-hostname "YOUR_PI_HOSTNAME"  
 
 ### Docker  
-Kubernetes is used to manage Docker containers on hybrid cloud infrastructure. Thus we need to have docker up and running on all the nodes before we can setup K3s.  
+Kubernetes is used to manage Docker containers on hybrid cloud infrastructure. Thus we need to have docker up and running on all the nodes before we can setup K3s. ![caution] for 32 bit and arm processor
+sudo apt update  
+sudo apt install apt-transport-https ca-certificates curl software-properties-common -y  
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -  
+sudo add-apt-repository "deb [arm] https://download.docker.com/linux/ubuntu focal stable"   
+
+sudo apt update  
+sudo apt install docker -y  
+
 
 ### Install K3 Master and Workers  
 follow this to install docker and k3s  
