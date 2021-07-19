@@ -30,3 +30,7 @@ https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspb
 https://medium.com/@yankee.exe/setting-up-multi-node-kubernetes-cluster-with-k3s-and-multipass-d4efed47fed5  
 
 
+
+### Install K3 Server  
+follow this to install docker and k3s  
+https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
