@@ -1,19 +1,20 @@
 ## Kubernetes on Pi  
 
-Create a K8 cluster from scratch for fun , profit and learning (this document is for exploration/learning purpose only)
-Hardware Requirements:
-  Basic understanding of different processor type (armhf, amd64 etc.)
-  Few Pi's (Pi 4 with 8M is the best) , SD cards with ubuntu 20.04 (64 bits for Pi 4, 32 bits for Pi 3)
-  Optional: A 8-port switch (preferably with PoE)
-  Pi Zero's (Broadcom BCM2835) can't be used as cluster node
+Create a K8 cluster from scratch for fun , profit and learning (this document is for exploration/learning purpose only)  
 
-Software requirement:
-Used Rancher's K8S kubernetes distro, it is lightweight, officially supported by CNCF (unlike mikrok8, Minikube, it is production quality and designed for production workloads across resource constrained, remote locations or on IoT devices, it is also optimized for ARM).
-The cluster of 3 nodes
-Master: Pi 4
-Worker-01: Pi 3
-Worker-02 (ubuntu VM on a laptop, example: multipass launch --cpus 1 --mem 1G --disk 2G --name worker-02 )
-Use ssh_authorized_keys in all nodes, so they can access each other (ssh-copy-id)
+Hardware Requirements:  
+  Basic understanding of different processor type (armhf, amd64 etc.)  
+  Few Pi's (Pi 4 with 8M is the best) , SD cards with ubuntu 20.04 (64 bits for Pi 4, 32 bits for Pi 3)  
+  Optional: A 8-port switch (preferably with PoE)  
+  Pi Zero's (Broadcom BCM2835) can't be used as cluster node  
+
+Software requirement:  
+Used Rancher's K8S kubernetes distro, it is lightweight, officially supported by CNCF (unlike mikrok8, Minikube, it is production quality and designed for production workloads across resource constrained, remote locations or on IoT devices, it is also optimized for ARM).  
+The cluster of 3 nodes  
+Master: Pi 4  
+Worker-01: Pi 3  
+Worker-02 (ubuntu VM on a laptop, example: multipass launch --cpus 1 --mem 1G --disk 2G --name worker-02 )  
+Use ssh_authorized_keys in all nodes, so they can access each other (ssh-copy-id)  
    
 
 
@@ -27,10 +28,10 @@ export K3S_URL=https://10.0.0.16:6443
 export K3S_TOKEN=K10d242b3f69d254128eac1522cbe0bc03a06a0b6f45f0b6f01d31d85ce8645d8::server:ebc4e6d370efcdbc6109d4be036655d5  
 
 
-### Configure pi's hardware
-Need to add following to file: /boot/firmware/cmdline.txt  
+### Configure pi's hardware  
+Need to add following to file: /boot/firmware/cmdline.txt    
 !caution: do not add a new line  
-sudo sed -i '1s/^/cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory /'   
+sudo sed -i '1s/^/cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory /'    
 
 sudo reboot  
   
