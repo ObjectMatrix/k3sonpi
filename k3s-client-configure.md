@@ -1,4 +1,22 @@
 ## Kubernetes on Pi  
+
+Create a K8 cluster from scratch for fun , profit and learning (this document is for exploration/learning purpose only)
+Hardware Requirements:
+  Basic understanding of different processor type (armhf, amd64 etc.)
+  Few Pi's (Pi 4 with 8M is the best) , SD cards with ubuntu 20.04 (64 bits for Pi 4, 32 bits for Pi 3)
+  Optional: A 8-port switch (preferably with PoE)
+  Pi Zero's (Broadcom BCM2835) can't be used as cluster node
+
+Software requirement:
+Used Rancher's K8S kubernetes distro, it is lightweight, officially supported by CNCF (unlike mikrok8, Minikube, it is production quality and designed for production workloads across resource constrained, remote locations or on IoT devices, it is also optimized for ARM).
+The cluster of 3 nodes
+Master: Pi 4
+Worker-01: Pi 3
+Worker-02 (ubuntu VM on a laptop, example: multipass launch --cpus 1 --mem 1G --disk 2G --name worker-02 )
+Use ssh_authorized_keys in all nodes, so they can access each other (ssh-copy-id)
+   
+
+
 ![pi-cluster](https://github.com/ObjectMatrix/k3sonpi/blob/main/piKube.png)
 
 ### Prepare Worker Nodes  
