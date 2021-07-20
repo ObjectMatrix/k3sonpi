@@ -2,19 +2,23 @@
 
 Create a K8 cluster from scratch for fun , profit and learning (this document is for exploration/learning purpose only)  
 
-Hardware Requirements:  
+### Hardware:  
   Basic understanding of different processor type (armhf, amd64 etc.)  
   Few Pi's (Pi 4 with 8M is the best) , SD cards with ubuntu 20.04 (64 bits for Pi 4, 32 bits for Pi 3)  
   Optional: A 8-port switch (preferably with PoE)  
   Pi Zero's (Broadcom BCM2835) can't be used as cluster node  
+  
+### Alternative Hardware Choices: 
+  - AWS EC2 instances (tiny), 
+  - Your pc/laptop (create ubuntu VMs with `Multipass launch`)  
 
-Software requirement:  
+### Software requirement:  
 Used Rancher's K8S kubernetes distro, it is lightweight, officially supported by CNCF (unlike mikrok8, Minikube, it is production quality and designed for production workloads across resource constrained, remote locations or on IoT devices, it is also optimized for ARM).  
 The cluster of 3 nodes  
-Master: Pi 4  
-Worker-01: Pi 3  
-Worker-02 (ubuntu VM on a laptop, example: multipass launch --cpus 1 --mem 1G --disk 2G --name worker-02 )  
-Use ssh_authorized_keys in all nodes, so they can access each other (ssh-copy-id)  
+- Master: Pi 4  
+- Worker-01: Pi 3  
+- Worker-02 (ubuntu VM on a laptop, example: multipass launch --cpus 1 --mem 1G --disk 2G --name worker-02 )  
+  Use ssh_authorized_keys in all nodes, so they can access each other (ssh-copy-id)  
    
 
 
@@ -35,7 +39,7 @@ sudo sed -i '1s/^/cgroup_enable=cpuset cgroup_memory=1 cgroup_enable=memory /'
 
 sudo reboot  
   
-### handy
+### handy dandy
 hostname naming:
 sudo hostnamectl set-hostname "YOUR_PI_HOSTNAME"  
 
@@ -48,7 +52,7 @@ https://withblue.ink/2019/07/13/yes-you-can-run-docker-on-raspbian.html
 follow this to install docker and k3s  
 https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
 
-### config
+### Config
 copy this file from Master
 /etc/rancher/k3s/k3s.yaml   
 to each Worker  
