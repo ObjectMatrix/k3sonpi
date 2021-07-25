@@ -50,7 +50,9 @@ https://withblue.ink/2019/07/13/yes-you-can-run-docker-on-raspbian.html
 
 ### Install K3 Master and Workers  
 follow this to install docker and k3s  
-https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
+
+- https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/amp/
+- https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
 
 ### Config
 copy this file from Master
