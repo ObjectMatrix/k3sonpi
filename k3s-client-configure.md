@@ -43,18 +43,18 @@ sudo reboot
 hostname naming:
 sudo hostnamectl set-hostname "YOUR_PI_HOSTNAME"  
 
-### Docker  
+### 🏐 Docker  
 Kubernetes is used to manage Docker containers on hybrid cloud infrastructure. Thus we need to have docker up and running on all the nodes before we can setup K3s. ![caution] for 32 bit and arm processor follow following link
 https://withblue.ink/2019/07/13/yes-you-can-run-docker-on-raspbian.html
 
 
-### Install K3 Master and Workers  
+###  🏐 Install K3 Master and Workers  
 follow this to install docker and k3s  
 
 - ⭐⭐⭐ https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/amp/   (with Portainer)
 - ⭐  https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
 
-### Config
+###  🏐 Config
 copy this file from Master
 /etc/rancher/k3s/k3s.yaml   
 to each Worker  
@@ -66,12 +66,12 @@ kubectl label nodes <your node name> nodePool=cluster
 >  kubectl label nodes worker-01 nodePool=cluster
   
   
-### Uninstall K3S  
+###  🏐  Uninstall K3S  
  - /usr/local/bin/k3s-uninstall.sh   (server)
  - /usr/local/bin/k3s-agent-uninstall.sh (workers)
  - 
 
-Read More:  
+ 🏐  Read More:  
   - https://levelup.gitconnected.com/kubernetes-cluster-with-k3s-and-multipass-7532361affa3  
   - https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/   
   - https://medium.com/@yankee.exe/setting-up-multi-node-kubernetes-cluster-with-k3s-and-multipass-d4efed47fed5  
