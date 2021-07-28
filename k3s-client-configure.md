@@ -57,6 +57,7 @@ follow this to install docker and k3s
 Gotcha:  
   - Master installation: $ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
   - On existing installation:  
+       - sudo su   
        - echo "K3S_KUBECONFIG_MODE=\"644\"" >> /etc/systemd/system/k3s.service.env  
 
 
