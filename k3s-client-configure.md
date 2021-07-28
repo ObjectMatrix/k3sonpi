@@ -53,6 +53,12 @@ follow this to install docker and k3s
 
 - ⭐⭐⭐ https://theselfhostingblog.com/posts/setting-up-a-kubernetes-cluster-using-raspberry-pis-k3s-and-portainer/amp/   (with Portainer)
 - ⭐  https://computingforgeeks.com/install-kubernetes-on-ubuntu-using-k3s/  
+  
+Gotcha:  
+  - Master installation: $ curl -sfL https://get.k3s.io | sh -s - --write-kubeconfig-mode 644
+  - On existing installation:  
+       - echo "K3S_KUBECONFIG_MODE=\"644\"" >> /etc/systemd/system/k3s.service.env  
+
 
 ###  🏐 Config
 copy this file from Master
