@@ -65,9 +65,9 @@ kubectl label nodes <your node name> nodePool=cluster
   Example:  
 >  kubectl label nodes worker-01 nodePool=cluster
   
-### Assign role names:
-  > kubectl label node worker-01 node-role.kubernetes.io/worker1=worker1
-  > kubectl label node macbook node-role.kubernetes.io/worker2=worker2
+### 🏐 Assign role names:
+  > kubectl label node worker-01 node-role.kubernetes.io/worker1=worker1   
+  > kubectl label node macbook node-role.kubernetes.io/worker2=worker2   
   
 ###  🏐  Uninstall K3S  
  - /usr/local/bin/k3s-uninstall.sh   (server)
