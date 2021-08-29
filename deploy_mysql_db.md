@@ -14,7 +14,8 @@ mkdir /mnt/data
 ### Then, create a configure file for persistent volume.
   
 # pv.yaml  
-  
+
+  ```
 apiVersion: v1
 kind: PersistentVolume
 metadata:
@@ -30,7 +31,7 @@ spec:
   hostPath:
     path: "/mnt/data"  # the directory created on node
 
- 
+ ```
  ### After created, we can claim it on Kubernetes. Here is the config file:
  
 # pvc.yaml
