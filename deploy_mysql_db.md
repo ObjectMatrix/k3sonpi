@@ -53,7 +53,8 @@ spec:
 ---
 
 
-### Adding A Secret with MySQL Password 
+### Adding A Secret with MySQL Password   
+ ``` 
 The passsword of mysql we will use later should be injected into the pod environment by using the Secret.
 
 Note that the value must be encoded using base643.
@@ -62,9 +63,9 @@ Says that the password is “mypassword”.
 
 echo -n 'mypassword' | base64
 The output bXlwYXNzd29yZA== should be put into our secret configure file.
-
+```
 ---
-# secret.yaml.  
+# secret.yaml 
   
 apiVersion: v1
 kind: Secret
@@ -76,12 +77,12 @@ data:
   
   
 ---
-
+```
 Creating Deployment with a MySQL Container 
 Specifying image to create a container in pod.
 Using PersistentVolumeClaim as volume.
 Using Secret as environment variables.
-
+```
 ---
 # deployment.yaml
 apiVersion: apps/v1
