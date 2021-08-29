@@ -12,7 +12,6 @@ At first, we need create a directory on node with command:
 mkdir /mnt/data
 
 ### Then, create a configure file for persistent volume.
----
   
 # pv.yaml  
   
@@ -30,13 +29,12 @@ spec:
     - ReadWriteOnce
   hostPath:
     path: "/mnt/data"  # the directory created on node
- ---
+
  
  ### After created, we can claim it on Kubernetes. Here is the config file:
  
   # pvc.yaml
- 
---- 
+
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -50,10 +48,11 @@ spec:
       storage: 2Gi  # the storage should be less than capacity in persistent volue
  
 
----
 
 
 ### Adding A Secret with MySQL Password   
+  
+  
  ``` 
 The passsword of mysql we will use later should be injected into the pod environment by using the Secret.
 
@@ -64,7 +63,9 @@ Says that the password is “mypassword”.
 echo -n 'mypassword' | base64
 The output bXlwYXNzd29yZA== should be put into our secret configure file.
 ```
----
+  
+  
+
 # secret.yaml 
   
 apiVersion: v1
@@ -76,14 +77,15 @@ data:
   password: bXlwYXNzd29yZA==  # encoded base64 password
   
   
----
+
+  
 ```
 Creating Deployment with a MySQL Container 
 Specifying image to create a container in pod.
 Using PersistentVolumeClaim as volume.
 Using Secret as environment variables.
 ```
----
+
 # deployment.yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -121,10 +123,10 @@ spec:
             - mountPath: "/var/lib/mysql"
               name: mysql-data-storage
               
----              
+ ```            
 Expose the Service 
 After the deployment applied and the pod is running. The MySQL service is not exposed to the node. We need to create a Service to listen the port on node.
----
+```
 # service.yaml
 apiVersion: v1
 kind: Service
@@ -138,13 +140,12 @@ spec:
     - protocol: TCP
       port: 3306
       targetPort: 3306
-      nodePort: 30006
----
 
 
+```
 connet to your new database with a MySQL client.
 
 mysql -P 30006 -h <raspberry-pi-host> -u root -p
 All done!
-
+```
 
