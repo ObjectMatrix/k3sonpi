@@ -1,4 +1,4 @@
-# Install MySQL on Kubernetes    
+# Install MySQL onto a cluster with Kubernetes    
 
 We will create configures and apply them to create a MySQL service. All configure files below must be applied after created with command:
 
