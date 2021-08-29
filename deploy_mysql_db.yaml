@@ -1,4 +1,5 @@
-# Install MySQL on Kubernetes 
+# Install MySQL on Kubernetes    
+
 We will create configures and apply them to create a MySQL service. All configure files below must be applied after created with command:
 
 kubectl apply -f <config-name>.yaml
