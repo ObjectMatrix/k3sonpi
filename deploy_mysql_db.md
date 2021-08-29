@@ -35,6 +35,7 @@ spec:
  ### After created, we can claim it on Kubernetes. Here is the config file:
  
 # pvc.yaml
+  
 ```
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -47,7 +48,6 @@ spec:
   resources:
     requests:
       storage: 2Gi  # the storage should be less than capacity in persistent volue
- 
 
 ```
 
@@ -149,10 +149,10 @@ spec:
 
 ```
   
-```
+<p>
 connet to your new database with a MySQL client.
 
 mysql -P 30006 -h <raspberry-pi-host> -u root -p
 All done!
-```
+</p>
 
