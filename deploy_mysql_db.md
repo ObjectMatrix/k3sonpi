@@ -134,7 +134,7 @@ After the deployment applied and the pod is running. The MySQL service is not ex
 # service.yaml 
   
   
-```
+```yaml
 apiVersion: v1
 kind: Service
 metadata:
