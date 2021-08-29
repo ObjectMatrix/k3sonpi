@@ -33,8 +33,8 @@ spec:
  
  ### After created, we can claim it on Kubernetes. Here is the config file:
  
-  # pvc.yaml
-
+# pvc.yaml
+```
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
@@ -48,7 +48,7 @@ spec:
       storage: 2Gi  # the storage should be less than capacity in persistent volue
  
 
-
+```
 
 ### Adding A Secret with MySQL Password   
   
@@ -67,7 +67,7 @@ The output bXlwYXNzd29yZA== should be put into our secret configure file.
   
 
 # secret.yaml 
-  
+ ``` 
 apiVersion: v1
 kind: Secret
 metadata:
@@ -76,7 +76,7 @@ type: Opaque
 data:
   password: bXlwYXNzd29yZA==  # encoded base64 password
   
-  
+```  
 
   
 ```
@@ -87,6 +87,8 @@ Using Secret as environment variables.
 ```
 
 # deployment.yaml
+  
+  ```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -127,6 +129,9 @@ spec:
 Expose the Service 
 After the deployment applied and the pod is running. The MySQL service is not exposed to the node. We need to create a Service to listen the port on node.
 ```
+  
+  
+```
 # service.yaml
 apiVersion: v1
 kind: Service
@@ -141,7 +146,8 @@ spec:
       port: 3306
       targetPort: 3306
 
-
+```
+  
 ```
 connet to your new database with a MySQL client.
 
