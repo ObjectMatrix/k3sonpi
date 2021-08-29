@@ -131,9 +131,10 @@ Expose the Service
 After the deployment applied and the pod is running. The MySQL service is not exposed to the node. We need to create a Service to listen the port on node.
 ```
   
+# service.yaml 
+  
   
 ```
-# service.yaml
 apiVersion: v1
 kind: Service
 metadata:
@@ -146,7 +147,6 @@ spec:
     - protocol: TCP
       port: 3306
       targetPort: 3306
-
 ```
   
 <p>
