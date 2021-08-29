@@ -14,7 +14,7 @@ mkdir /mnt/data
 ### Then, create a configure file for persistent volume.
 ---
   
-# pv.yaml.  
+# pv.yaml  
   
 apiVersion: v1
 kind: PersistentVolume
@@ -34,7 +34,7 @@ spec:
  
  ### After created, we can claim it on Kubernetes. Here is the config file:
  
-  # pvc.yaml.   
+  # pvc.yaml
  
 --- 
 apiVersion: v1
