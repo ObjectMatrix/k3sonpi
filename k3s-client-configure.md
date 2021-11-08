@@ -31,8 +31,11 @@ export K3S_KUBECONFIG_MODE=644
 export K3S_URL=https://10.0.0.16:6443  
 export K3S_TOKEN=K10d242b3f69d254128eac1522cbe0bc03a06a0b6f45f0b6f01d31d85ce8645d8::server:ebc4e6d370efcdbc6109d4be036655d5  
 
-execute following inside the node to install client (k3s)
-curl -sfL https://get.k3s.io | K3S_TOKEN=${K3S_TOKEN} K3S_URL=${K3S_URL} sh -
+execute following inside the node to install client (k3s).  
+
+curl -sfL https://get.k3s.io | K3S_TOKEN=${K3S_TOKEN} K3S_URL=${K3S_URL} sh -  
+
+
 
 ### 🏐 Configure pi's hardware  
 Need to add following to file: /boot/firmware/cmdline.txt    
